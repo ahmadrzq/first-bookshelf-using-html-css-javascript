@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    rgba(208, 184, 168, 0.5),
+    rgba(223, 211, 195, 0.3)
+  );
+  background-image: url(https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg?w=2000);
+  background-size: cover;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #7d6e83;
+  color: #f8ede3;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.add button {
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  color: #7d6e83;
+  background-color: #f8ede3;
+  cursor: pointer;
+}
+
+.add button:hover {
+  background-color: #7d6e83;
+  color: #f8ede3;
+  border: 1px solid ;
+}
+
+.form-search input {
+  padding: 15px;
+  border-radius: 40px;
+  width: 300px;
+  border: none;
+  color: #7d6e83;
+  background-color: #f8ede3;
+}
+
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  background-color: #fefefe;
+  border: 1px solid #888;
+}
+
+.modal-content > h2 {
+  text-align: center;
+  color: #7d6e83;
+}
+
+.modal-content > form > .input {
+  margin: 20px 0;
+}
+
+.modal-content > form > button {
+  background-color: #7d6e83;
+  color: white;
+  border: 0;
+  border-radius: 40px;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.modal-content > form > button:hover {
+  color: #7d6e83;
+  background-color: white;
+  border: 1px solid #7d6e83;
+}
+
+.modal-content > form > button > span {
+  font-weight: bold;
+}
+
+.modal-content > form > .input > input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.modal-content > form > .input > label {
+  color: #7d6e83;
+  font-weight: bold;
+}
+
+.modal-content > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content > form > .input_inline > label {
+  color: #7d6e83;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.book_shelf {
+  flex-basis: 50%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: #7d6e83;
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.book_shelf > .book_list > .item {
+  background: #7d6e83;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: #f8ede3;
+  text-align: center;
+}
+
+.book_shelf > .book_list > .item >
+h2 {
+  margin: 15px 0;
+  font-size: 40px;
+}
+.book_shelf > .book_list > .item >
+p {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.check-button {
+  width: 40px;
+  height: 40px;
+  background: url("../images/check-outline.svg");
+  background-size: cover;
+  margin: 20px 0;
+  cursor: pointer;
+  border: none;
+}
+
+.check-button:hover {
+  background: url("../images/check-solid.svg");
+  background-size: cover;
+}
+
+.trash-button {
+  width: 40px;
+  height: 40px;
+
+  background: url("../images/trash-outline.svg");
+  background-size: cover;
+  margin: 20px 5px;
+
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+.trash-button:hover {
+  background: url("../images/trash-fill.svg");
+  background-size: cover;
+}
+
+.undo-button {
+  width: 40px;
+  height: 40px;
+
+  background: url("../images/undo-outline.svg");
+  background-size: cover;
+  margin: 20px 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.undo-button:hover {
+  background: url("../images/undo-outline.svg");
+  background-size: cover;
+}
+
+.check-button:focus,
+.trash-button {
+  outline: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -86,7 +86,14 @@ function makeBook(bookObject) {
             addBookToCompleted(bookObject.id);
         });
 
-        container.append(checkButton);
+        const trashButton = document.createElement('button');
+        trashButton.classList.add('trash-button');
+
+        trashButton.addEventListener('click', function () {
+            removeBookFromCompleted(bookObject.id);
+        });
+
+        container.append(checkButton, trashButton);
     }
 
     return container;
